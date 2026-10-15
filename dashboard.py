@@ -137,7 +137,7 @@ if fc is not None:
         x="quarter:T", y="value:Q",
         tooltip=[alt.Tooltip("quarter:T", title="Forecast quarter", format="%b %Y"), alt.Tooltip("value:Q", title="Forecast", format=",.1f")])
     layers = [band, line, points, fline]
-st.altair_chart(alt.layer(*layers).properties(height=380).interactive(bind_y=False), width="stretch")
+st.altair_chart(alt.layer(*layers).properties(height=380), width="stretch")
 st.caption("Blue = actual. Orange dashed = forecast, with the shaded likely range. Hover over the line for exact values.")
 
 if fc is not None:
